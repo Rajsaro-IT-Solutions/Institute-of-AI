@@ -1,0 +1,103 @@
+export const LEARNING_TRACKS = [
+  {
+    id: "ml-engineer",
+    title: "Machine Learning Engineer",
+    subtitle: "Master ML from fundamentals to production",
+    description: "Become a proficient ML engineer by learning algorithms, model development, and deployment strategies.",
+    icon: "BarChart3",
+    duration: "12 weeks",
+    level: "Beginner → Intermediate",
+    courses: [
+      "Python for AI",
+      "Machine Learning 101",
+      "Advanced ML Algorithms",
+      "ML in Production",
+    ],
+    skills: ["Python", "Scikit-learn", "SQL", "Statistics", "Git"],
+    salary: "₹120k - ₹180k",
+    jobRole: "ML Engineer",
+  },
+  {
+    id: "dl-specialist",
+    title: "Deep Learning Specialist",
+    subtitle: "Specialize in neural networks and deep learning",
+    description: "Develop expertise in deep neural networks, computer vision, and modern deep learning frameworks.",
+    icon: "Zap",
+    duration: "14 weeks",
+    level: "Intermediate → Advanced",
+    courses: [
+      "Deep Learning with TensorFlow",
+      "Advanced Neural Networks",
+      "Computer Vision Masterclass",
+      "Production Deployment",
+    ],
+    skills: ["TensorFlow", "PyTorch", "OpenCV", "CUDA", "Docker"],
+    salary: "₹140k - ₹200k",
+    jobRole: "Deep Learning Engineer",
+  },
+  {
+    id: "nlp-engineer",
+    title: "NLP Engineer",
+    subtitle: "Master Natural Language Processing",
+    description: "Become an NLP expert building language understanding and generation systems.",
+    icon: "MessageSquare",
+    duration: "12 weeks",
+    level: "Intermediate → Advanced",
+    courses: [
+      "NLP Fundamentals",
+      "NLP with Transformers",
+      "LLM Fine-tuning",
+      "Prompt Engineering",
+    ],
+    skills: ["Hugging Face", "Transformers", "LLMs", "BERT", "GPT"],
+    salary: "₹130k - ₹190k",
+    jobRole: "NLP Engineer",
+  },
+  {
+    id: "ai-engineer",
+    title: "AI Engineer",
+    subtitle: "Full-stack AI development",
+    description: "Become a full-stack AI engineer capable of building complete AI systems from research to production.",
+    icon: "Rocket",
+    duration: "16 weeks",
+    level: "Beginner → Expert",
+    courses: [
+      "AI Fundamentals",
+      "Machine Learning",
+      "Deep Learning",
+      "System Design",
+      "Production Deployment",
+      "AI at Scale",
+    ],
+    skills: ["Python", "ML", "DL", "Backend", "DevOps", "System Design"],
+    salary: "₹150k - ₹250k+",
+    jobRole: "AI Engineer",
+  },
+];
+
+export const TRACK_BENEFITS = [
+  {
+    title: "Structured Learning",
+    description: "Follow a proven learning path with clear milestones",
+  },
+  {
+    title: "Real Projects",
+    description: "Build portfolio projects during the track",
+  },
+  {
+    title: "Expert Mentorship",
+    description: "Get guidance from industry experts",
+  },
+  {
+    title: "Job Preparation",
+    description: "Interview prep and resume optimization",
+  },
+  {
+    title: "Community",
+    description: "Connect with other learners in your track",
+  },
+  {
+    title: "Certifications",
+    description: "Earn recognized certifications",
+  },
+];
