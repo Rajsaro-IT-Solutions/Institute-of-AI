@@ -10,7 +10,7 @@ export default function EmailVerificationBanner({
       <div className="flex items-start gap-3">
         <MailCheck className="mt-0.5 h-4 w-4 flex-none" />
         <p>
-          We've sent a verification email{email ? ` to ${email}` : ""}. Enter the
+          We&apos;ve sent a verification email{email ? ` to ${email}` : ""}. Enter the
           6-digit code below to activate your account.
         </p>
       </div>

@@ -28,6 +28,11 @@ export default function GlobalError({
             We hit an application error while loading this page. Try again, or head back
             to the homepage while we recover.
           </p>
+          <pre className="mb-6 max-w-full overflow-x-auto rounded-lg bg-rose-950/50 p-4 text-left text-xs text-rose-300 whitespace-pre-wrap break-all">
+            {error?.message}
+            {"\n\n"}
+            {error?.stack}
+          </pre>
           <div className="flex flex-col justify-center gap-3 sm:flex-row">
             <Button onClick={reset} leftIcon={<RefreshCw className="h-4 w-4" />}>
               Try again
