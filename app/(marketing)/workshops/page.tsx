@@ -2,6 +2,20 @@ import MarketingPage from "@/components/marketing/MarketingPage";
 import { Card } from "@/components/ui/Card";
 import { WORKSHOPS } from "@/constants/courses";
 import { WORKSHOPS_PAGE } from "@/constants/marketing-pages";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata = buildMetadata({
+  title: "AI Workshops - Live & Interactive",
+  description: WORKSHOPS_PAGE.description,
+  path: "/workshops",
+  keywords: [
+    "AI workshops",
+    "LLM fine-tuning",
+    "prompt engineering",
+    "ML deployment",
+    "live AI training",
+  ],
+});
 
 export default function WorkshopsPage() {
   return (

@@ -1,14 +1,31 @@
 import Link from "next/link";
 import { Star, Users, Clock, BookOpen, Award } from "lucide-react";
 import MarketingPage from "@/components/marketing/MarketingPage";
+import JsonLd from "@/components/seo/JsonLd";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/button";
 import { COURSES } from "@/constants/courses";
 import { COURSES_PAGE } from "@/constants/marketing-pages";
+import { buildMetadata, courseListSchema } from "@/lib/seo";
+
+export const metadata = buildMetadata({
+  title: "AI Courses - Machine Learning, Deep Learning & NLP",
+  description: COURSES_PAGE.description,
+  path: "/courses",
+  keywords: [
+    "AI courses",
+    "machine learning courses",
+    "deep learning courses",
+    "NLP courses",
+    "computer vision courses",
+    "reinforcement learning",
+  ],
+});
 
 export default function CoursesPage() {
   return (
     <MarketingPage {...COURSES_PAGE}>
+      <JsonLd data={courseListSchema(COURSES)} />
       <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
         {COURSES.map((course) => (
           <Card key={course.id} className="flex h-full flex-col overflow-hidden border-slate-200 bg-white p-0 transition-all hover:shadow-xl">

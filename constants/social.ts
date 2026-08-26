@@ -10,32 +10,32 @@ import { MdOutlineMail } from "react-icons/md";
 export const SOCIAL_LINKS = [
   {
     name: "Twitter",
-    url: "https://twitter.com/instituteofai",
+    url: "https://twitter.com/universityofai",
     icon: FaXTwitter,
   },
   {
     name: "LinkedIn",
-    url: "https://linkedin.com/company/instituteofai",
+    url: "https://linkedin.com/company/universityofai",
     icon: FaLinkedinIn,
   },
   {
     name: "GitHub",
-    url: "https://github.com/instituteofai",
+    url: "https://github.com/universityofai",
     icon: FaGithub,
   },
   {
     name: "YouTube",
-    url: "https://youtube.com/@instituteofai",
+    url: "https://youtube.com/@universityofai",
     icon: FaYoutube,
   },
   {
     name: "Discord",
-    url: "https://discord.gg/instituteofai",
+    url: "https://discord.gg/universityofai",
     icon: FaDiscord,
   },
   {
     name: "Email",
-    url: "mailto:hello@instituteofai.com",
+    url: "mailto:hello@universityofai.com",
     icon: MdOutlineMail,
   },
 ];

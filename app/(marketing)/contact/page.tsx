@@ -2,6 +2,13 @@ import MarketingPage from "@/components/marketing/MarketingPage";
 import { Card } from "@/components/ui/Card";
 import { BRAND } from "@/constants/brand";
 import { CONTACT_PAGE } from "@/constants/marketing-pages";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata = buildMetadata({
+  title: "Contact Us",
+  description: CONTACT_PAGE.description,
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (

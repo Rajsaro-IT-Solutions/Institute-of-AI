@@ -52,7 +52,7 @@ export default function VerifyEmailScreen() {
         <AuthSuccessState
           actionHref="/login"
           actionLabel="Continue to login"
-          description="Your email address has been verified. You can now access the full Institute of AI platform."
+          description="Your email address has been verified. You can now access the full University Of AI platform."
           title="Email verified"
         />
       </AuthCard>
@@ -83,7 +83,7 @@ export default function VerifyEmailScreen() {
           autoComplete="email"
           error={errors.email?.message}
           label="Email"
-          placeholder="you@instituteofai.com"
+          placeholder="you@universityofai.com"
           type="email"
           {...register("email")}
         />

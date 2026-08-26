@@ -4,7 +4,7 @@ export const TESTIMONIALS = [
     name: "Sarah Williams",
     role: "ML Engineer at Google",
     company: "Google",
-    content: "Institute of AI transformed my career. The courses are incredibly comprehensive and practical. I landed my dream job at Google after completing the bootcamp.",
+    content: "University Of AI transformed my career. The courses are incredibly comprehensive and practical. I landed my dream job at Google after completing the bootcamp.",
     image: "/images/testimonials/sarah.jpg",
     rating: 5,
   },

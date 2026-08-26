@@ -1,6 +1,13 @@
 import MarketingPage from "@/components/marketing/MarketingPage";
 import { Card } from "@/components/ui/Card";
 import { PRICING_PAGE } from "@/constants/marketing-pages";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata = buildMetadata({
+  title: "Pricing",
+  description: PRICING_PAGE.description,
+  path: "/pricing",
+});
 
 const plans = [
   {

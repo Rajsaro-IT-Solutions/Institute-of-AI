@@ -1,4 +1,5 @@
 import Navbar from "@/components/layout/Navbar";
+import JsonLd from "@/components/seo/JsonLd";
 import AnnouncementSection from "@/features/home/Announcement";
 import HeroSection from "@/features/home/Hero";
 import TrustedSection from "@/features/home/Trusted";
@@ -11,10 +12,21 @@ import TestimonialsSection from "@/features/home/Testimonials";
 import FAQSection from "@/features/home/FAQ";
 import CTASection from "@/features/home/CTA";
 import Footer from "@/features/home/Footer";
+import { SEO } from "@/constants/brand";
+import { FAQ } from "@/constants/testimonials";
+import { buildMetadata, faqSchema } from "@/lib/seo";
+
+export const metadata = buildMetadata({
+  title: SEO.title,
+  description: SEO.description,
+  path: "/",
+  absolute: true,
+});
 
 export default function Home() {
   return (
     <>
+      <JsonLd data={faqSchema(FAQ)} />
       <AnnouncementSection />
       <Navbar />
       <main>

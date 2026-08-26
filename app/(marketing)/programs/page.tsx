@@ -1,14 +1,31 @@
 import Link from "next/link";
 import { CheckCircle2, Clock, Award, ArrowRight } from "lucide-react";
 import MarketingPage from "@/components/marketing/MarketingPage";
+import JsonLd from "@/components/seo/JsonLd";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/button";
 import { PROGRAMS } from "@/constants/programs";
 import { PROGRAMS_PAGE } from "@/constants/marketing-pages";
+import { buildMetadata, programListSchema } from "@/lib/seo";
+
+export const metadata = buildMetadata({
+  title: "AI Programs & Bootcamps",
+  description: PROGRAMS_PAGE.description,
+  path: "/programs",
+  keywords: [
+    "AI bootcamp",
+    "AI career bootcamp",
+    "machine learning program",
+    "deep learning program",
+    "NLP program",
+    "learn AI",
+  ],
+});
 
 export default function ProgramsPage() {
   return (
     <MarketingPage {...PROGRAMS_PAGE}>
+      <JsonLd data={programListSchema(PROGRAMS)} />
       <div className="grid gap-8 md:grid-cols-2">
         {PROGRAMS.map((program) => (
           <Card key={program.id} className="flex h-full flex-col overflow-hidden border-slate-200 bg-white p-0 transition-all hover:shadow-xl">
@@ -26,7 +43,7 @@ export default function ProgramsPage() {
               {/* Learning Outcomes */}
               <div className="mb-4">
                 <p className="mb-3 text-sm uppercase tracking-[0.18em] text-slate-500">
-                  What you'll learn
+                  What you&apos;ll learn
                 </p>
                 <ul className="space-y-2">
                   {program.learningOutcomes.slice(0, 4).map((outcome) => (

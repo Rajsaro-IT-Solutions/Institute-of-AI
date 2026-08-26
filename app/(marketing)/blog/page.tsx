@@ -1,6 +1,14 @@
 import MarketingPage from "@/components/marketing/MarketingPage";
 import { Card } from "@/components/ui/Card";
 import { BLOG_PAGE } from "@/constants/marketing-pages";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata = buildMetadata({
+  title: "AI Blog - Learning Strategies & Career Insights",
+  description: BLOG_PAGE.description,
+  path: "/blog",
+  type: "article",
+});
 
 const posts = [
   {

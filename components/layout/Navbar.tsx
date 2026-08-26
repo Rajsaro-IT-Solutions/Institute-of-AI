@@ -16,7 +16,7 @@ export default function Navbar() {
       <Container className="flex h-20 items-center justify-between gap-6">
         <Link href="/" className="flex min-w-fit items-center gap-3">
           <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,#1d4ed8_0%,#2563eb_52%,#7c3aed_100%)] text-base font-bold text-white shadow-lg shadow-blue-200">
-            IA
+            {BRAND.monogram}
           </div>
           <div className="leading-tight">
             <p className="text-[0.92rem] font-semibold uppercase tracking-[0.34em] text-slate-900">

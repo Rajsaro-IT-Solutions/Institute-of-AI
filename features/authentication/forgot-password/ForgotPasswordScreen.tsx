@@ -56,7 +56,7 @@ export default function ForgotPasswordScreen() {
           autoComplete="email"
           error={errors.email?.message}
           label="Email"
-          placeholder="you@instituteofai.com"
+          placeholder="you@universityofai.com"
           type="email"
           {...register("email")}
         />

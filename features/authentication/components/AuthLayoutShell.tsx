@@ -38,7 +38,7 @@ export default function AuthLayoutShell({
           </h2>
           <p className="mt-6 max-w-xl text-lg leading-8 text-slate-500">
             Sign in, register, recover passwords, and verify identity through a
-            polished experience designed for Institute of AI learners and enterprise cohorts.
+            polished experience designed for University Of AI learners and enterprise cohorts.
           </p>
 
           <div className="mt-10 space-y-4">

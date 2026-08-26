@@ -38,7 +38,7 @@ export default function HeroSection() {
                 </span>
               </h1>
               <p className="mt-6 max-w-[31rem] text-[1.05rem] leading-8 text-blue-50/82 md:text-[1.1rem]">
-                At Institute of AI, we deliver industry-relevant AI education with hands-on
+                At University Of AI, we deliver industry-relevant AI education with hands-on
                 experience, real-world projects, and complete theoretical knowledge to make
                 you future ready.
               </p>

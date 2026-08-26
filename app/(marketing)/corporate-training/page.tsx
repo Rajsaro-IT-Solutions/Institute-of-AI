@@ -4,6 +4,13 @@ import MarketingPage from "@/components/marketing/MarketingPage";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/button";
 import { CORPORATE_PAGE } from "@/constants/marketing-pages";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata = buildMetadata({
+  title: "Corporate AI Training for Teams",
+  description: CORPORATE_PAGE.description,
+  path: "/corporate-training",
+});
 
 const corporateServices = [
   {
@@ -93,10 +100,10 @@ export default function CorporateTrainingPage() {
       {/* Additional CTA Section */}
       <div className="mt-16 rounded-2xl bg-gradient-to-br from-blue-50 to-indigo-100 p-8 text-center md:p-12">
         <h3 className="text-2xl font-semibold text-slate-900 md:text-3xl">
-          Ready to transform your team's AI capabilities?
+          Ready to transform your team&apos;s AI capabilities?
         </h3>
         <p className="mx-auto mt-4 max-w-2xl text-base text-slate-600">
-          Let's discuss your organization's unique needs and design a custom training program that delivers measurable results.
+          Let&apos;s discuss your organization&apos;s unique needs and design a custom training program that delivers measurable results.
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700">

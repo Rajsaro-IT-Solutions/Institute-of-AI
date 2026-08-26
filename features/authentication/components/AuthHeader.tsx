@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
+import { BRAND } from "@/constants/brand";
 
 export default function AuthHeader({
   title,
@@ -17,11 +18,11 @@ export default function AuthHeader({
         className="mb-6 inline-flex items-center gap-3 text-slate-900"
       >
         <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,#2563eb_0%,#06b6d4_100%)] text-sm font-bold text-white">
-          IA
+          {BRAND.monogram}
         </span>
         <span>
           <span className="block text-xs uppercase tracking-[0.35em] text-slate-500">
-            Institute of AI
+            {BRAND.name}
           </span>
           <span className="block text-xs text-slate-400">
             Secure access for learners and teams
