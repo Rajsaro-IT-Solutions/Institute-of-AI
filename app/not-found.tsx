@@ -21,7 +21,7 @@ export default function NotFound() {
         <p className="mb-3 text-sm uppercase tracking-[0.32em] text-sky-300">404</p>
         <h1 className="mb-4 text-4xl font-semibold text-slate-50">Page not found</h1>
         <p className="mb-8 text-lg leading-8 text-slate-300">
-          The page you requested is not part of the current University Of AI experience.
+          The page you requested is not part of the current Institute of AI experience.
         </p>
         <Button asChild size="lg">
           <Link href="/">Return to the homepage</Link>

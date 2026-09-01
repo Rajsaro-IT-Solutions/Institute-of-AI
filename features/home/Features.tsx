@@ -19,7 +19,7 @@ export default function FeaturesSection() {
     <section className="section-padding px-6">
       <Container>
         <SectionHeading
-          badge="Why University Of AI"
+          badge="Why Institute of AI"
           title="A learning system engineered for real capability"
           description="Every part of the platform is designed to help learners go from curiosity to confident production work."
         />

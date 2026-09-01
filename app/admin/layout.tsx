@@ -4,7 +4,7 @@ import AdminShell from "@/features/admin/components/AdminShell";
 export const metadata: Metadata = {
   title: {
     default: "Admin Panel",
-    template: "%s | Admin | University Of AI",
+    template: "%s | Admin | Institute of AI",
   },
   robots: {
     index: false,

@@ -1,5 +1,5 @@
 // ---------------------------------------------------------------------------
-// Mock data for the University Of AI admin panel.
+// Mock data for the Institute of AI admin panel.
 // Replace these with real API calls when the backend is wired up.
 // ---------------------------------------------------------------------------
 

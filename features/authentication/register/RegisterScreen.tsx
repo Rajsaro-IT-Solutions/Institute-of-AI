@@ -63,7 +63,7 @@ export default function RegisterScreen() {
     <AuthCard>
       <AuthHeader
         title="Create your account"
-        description="Join University Of AI to unlock structured learning, expert mentorship, and premium AI workflows."
+        description="Join Institute of AI to unlock structured learning, expert mentorship, and premium AI workflows."
       />
 
       <AuthForm
@@ -85,7 +85,7 @@ export default function RegisterScreen() {
           autoComplete="email"
           error={errors.email?.message}
           label="Email"
-          placeholder="you@universityofai.com"
+          placeholder="you@instituteofai.org"
           type="email"
           {...register("email")}
         />

@@ -1,8 +1,12 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import { ArrowRight, BrainCircuit, BriefcaseBusiness, GraduationCap, HandCoins, Sparkles } from "lucide-react";
 import Container from "@/components/layout/Container";
 import { Badge } from "@/components/ui/Badge";
 import { STATS } from "@/constants/stats";
+import DemoBookingModal from "@/components/forms/DemoBookingModal";
 
 const outcomes = [
   { icon: GraduationCap, label: "Hands-on Experience" },
@@ -12,6 +16,8 @@ const outcomes = [
 ];
 
 export default function HeroSection() {
+  const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
+
   return (
     <section className="px-3 pb-10 pt-8 lg:px-4">
       <Container className="max-w-[88rem]">
@@ -38,7 +44,7 @@ export default function HeroSection() {
                 </span>
               </h1>
               <p className="mt-6 max-w-[31rem] text-[1.05rem] leading-8 text-blue-50/82 md:text-[1.1rem]">
-                At University Of AI, we deliver industry-relevant AI education with hands-on
+                At Institute of AI, we deliver industry-relevant AI education with hands-on
                 experience, real-world projects, and complete theoretical knowledge to make
                 you future ready.
               </p>
@@ -51,12 +57,13 @@ export default function HeroSection() {
                   Explore Courses
                   <ArrowRight className="h-4 w-4" />
                 </Link>
-                <Link
-                  href="/contact"
-                  className="inline-flex min-h-14 items-center justify-center gap-2 rounded-2xl bg-[linear-gradient(90deg,#2563eb_0%,#06b6d4_100%)] px-8 text-[1.05rem] font-semibold text-white shadow-lg shadow-blue-700/30 transition-transform hover:-translate-y-0.5"
+                <button
+                  type="button"
+                  onClick={() => setIsDemoModalOpen(true)}
+                  className="inline-flex min-h-14 items-center justify-center gap-2 rounded-2xl bg-[linear-gradient(90deg,#2563eb_0%,#06b6d4_100%)] px-8 text-[1.05rem] font-semibold text-white shadow-lg shadow-blue-700/30 transition-transform hover:-translate-y-0.5 cursor-pointer"
                 >
                   Book Free Demo Class
-                </Link>
+                </button>
               </div>
 
               <div className="mt-10 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
@@ -123,6 +130,7 @@ export default function HeroSection() {
           </div>
         </div>
       </Container>
+      <DemoBookingModal isOpen={isDemoModalOpen} onClose={() => setIsDemoModalOpen(false)} />
     </section>
   );
 }

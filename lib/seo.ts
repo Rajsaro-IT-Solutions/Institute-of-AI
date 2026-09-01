@@ -13,7 +13,7 @@ type BuildMetadataArgs = {
 
 /**
  * Builds a complete, consistent Metadata object for a given page.
- * Title template is provided by the root layout ("%s | University Of AI"),
+ * Title template is provided by the root layout ("%s | Institute of AI"),
  * so page titles here are short, keyword-rich strings.
  */
 export function buildMetadata({

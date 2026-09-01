@@ -43,7 +43,7 @@ export default function AdminHeader({
         <div>
           <h1 className="text-lg font-semibold text-slate-900">{current}</h1>
           <p className="hidden text-xs text-slate-500 sm:block">
-            University Of AI · Admin panel
+            Institute of AI · Admin panel
           </p>
         </div>
       </div>

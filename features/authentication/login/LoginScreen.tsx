@@ -61,7 +61,7 @@ export default function LoginScreen() {
           autoComplete="email"
           error={errors.email?.message}
           label="Email"
-          placeholder="you@universityofai.com"
+          placeholder="you@instituteofai.org"
           type="email"
           {...register("email")}
         />
@@ -110,7 +110,7 @@ export default function LoginScreen() {
       <AuthFooter
         linkHref="/register"
         linkLabel="Create account"
-        prompt="New to University Of AI?"
+        prompt="New to Institute of AI?"
       />
     </AuthCard>
   );

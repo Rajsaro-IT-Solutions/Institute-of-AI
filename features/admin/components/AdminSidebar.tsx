@@ -73,12 +73,13 @@ export default function AdminSidebar() {
         })}
       </nav>
 
-      <div className="mt-auto rounded-2xl border border-blue-100 bg-blue-50/60 p-4">
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-700">
-          Quick tip
+      <div className="mt-auto rounded-2xl border border-emerald-100 bg-emerald-50/60 p-4">
+        <p className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-700 flex items-center gap-1.5">
+          <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+          Database Active
         </p>
         <p className="mt-2 text-xs leading-5 text-slate-600">
-          Admin data is mock content. Wire it to APIs when the backend is ready.
+          Live sync to sql12.freesqldatabase.com is enabled. All dashboard controls write directly to your database.
         </p>
       </div>
     </aside>

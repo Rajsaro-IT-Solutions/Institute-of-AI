@@ -2,7 +2,7 @@ export const ABOUT_PAGE = {
   eyebrow: "About",
   title: "An AI education company designed around execution, not passive consumption.",
   description:
-    "University Of AI exists to help learners and teams build practical AI capability through structured learning, project rigor, and career-focused systems.",
+    "Institute of AI exists to help learners and teams build practical AI capability through structured learning, project rigor, and career-focused systems.",
   highlights: [
     { label: "Mission", value: "Career-grade AI learning" },
     { label: "Model", value: "Cohorts + projects + mentorship" },
@@ -207,7 +207,7 @@ export const BLOG_PAGE = {
   eyebrow: "Blog",
   title: "Sharp writing on AI learning, implementation, and career leverage.",
   description:
-    "The University Of AI blog translates fast-moving AI trends into practical insights for learners, teams, and technical leaders.",
+    "The Institute of AI blog translates fast-moving AI trends into practical insights for learners, teams, and technical leaders.",
   highlights: [
     { label: "Focus", value: "Practical AI signal" },
     { label: "Audience", value: "Builders and operators" },
@@ -239,7 +239,7 @@ export const BLOG_PAGE = {
 
 export const CONTACT_PAGE = {
   eyebrow: "Contact",
-  title: "Talk with the University Of AI team about admissions, partnerships, or training.",
+  title: "Talk with the Institute of AI team about admissions, partnerships, or training.",
   description:
     "Whether you are exploring a program, training a team, or looking for collaboration opportunities, we make it easy to start the conversation.",
   highlights: [
@@ -309,7 +309,7 @@ export const PRIVACY_PAGE = {
   eyebrow: "Privacy Policy",
   title: "We treat learner trust, data handling, and platform integrity seriously.",
   description:
-    "University Of AI collects only the information needed to operate the platform responsibly, improve the learning experience, and communicate with users clearly.",
+    "Institute of AI collects only the information needed to operate the platform responsibly, improve the learning experience, and communicate with users clearly.",
   highlights: [
     { label: "Data use", value: "Platform operations and support" },
     { label: "Sharing", value: "Limited and purpose-bound" },
@@ -330,7 +330,7 @@ export const PRIVACY_PAGE = {
     },
   ],
   sidebarTitle: "What this covers",
-  sidebarDescription: "This policy describes the broad principles governing how data is handled across the University Of AI public website and platform surfaces.",
+  sidebarDescription: "This policy describes the broad principles governing how data is handled across the Institute of AI public website and platform surfaces.",
   sidebarList: [
     "Information collected",
     "How the information is used",
@@ -343,7 +343,7 @@ export const TERMS_PAGE = {
   eyebrow: "Terms",
   title: "Clear platform terms that protect the experience for learners, teams, and the company.",
   description:
-    "By accessing University Of AI services, users agree to use the platform lawfully, respect the learning environment, and follow the rules that support reliable service delivery.",
+    "By accessing Institute of AI services, users agree to use the platform lawfully, respect the learning environment, and follow the rules that support reliable service delivery.",
   highlights: [
     { label: "Access", value: "Subject to account compliance" },
     { label: "Content", value: "Protected learning materials" },
@@ -364,7 +364,7 @@ export const TERMS_PAGE = {
     },
   ],
   sidebarTitle: "Core expectations",
-  sidebarDescription: "These terms set the ground rules for using the University Of AI website, educational products, and related services.",
+  sidebarDescription: "These terms set the ground rules for using the Institute of AI website, educational products, and related services.",
   sidebarList: [
     "Use services appropriately",
     "Respect platform intellectual property",

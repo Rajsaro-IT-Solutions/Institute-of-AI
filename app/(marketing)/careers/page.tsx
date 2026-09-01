@@ -4,7 +4,7 @@ import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   title: "Careers",
-  description: "Join the University Of AI team and help build the future of AI education.",
+  description: "Join the Institute of AI team and help build the future of AI education.",
   path: "/careers",
 });
 

@@ -4,7 +4,6 @@ import MarketingPage from "@/components/marketing/MarketingPage";
 import JsonLd from "@/components/seo/JsonLd";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/button";
-import { COURSES } from "@/constants/courses";
 import { COURSES_PAGE } from "@/constants/marketing-pages";
 import { buildMetadata, courseListSchema } from "@/lib/seo";
 
@@ -22,12 +21,45 @@ export const metadata = buildMetadata({
   ],
 });
 
-export default function CoursesPage() {
+import { getCoursesAction } from "@/app/admin/actions";
+import { COURSES as STATIC_COURSES } from "@/constants/courses";
+
+export const dynamic = "force-dynamic";
+
+export default async function CoursesPage() {
+  const dbCourses = await getCoursesAction();
+  const publishedDbCourses = dbCourses.filter((c) => c.status === "Published");
+
+  const courses = publishedDbCourses.map((dbCourse) => {
+    // Attempt to merge with static definitions if available
+    const staticMatch = STATIC_COURSES.find(
+      (sc) =>
+        sc.title.toLowerCase() === dbCourse.title.toLowerCase() ||
+        sc.id.toLowerCase() === dbCourse.id.toLowerCase()
+    );
+
+    return {
+      id: dbCourse.id,
+      title: dbCourse.title,
+      description: staticMatch?.description || "Learn from industry experts at the Institute of AI.",
+      instructor: dbCourse.instructor,
+      level: staticMatch?.level || "All Levels",
+      duration: staticMatch?.duration || "6 weeks",
+      lessons: dbCourse.lessons || staticMatch?.lessons || 12,
+      students: dbCourse.students || staticMatch?.students || 0,
+      rating: dbCourse.rating || staticMatch?.rating || 5.0,
+      price: dbCourse.price || staticMatch?.price || 0,
+      image: staticMatch?.image || "/images/courses/default.jpg",
+      skills: staticMatch?.skills || [dbCourse.category, "AI Core"],
+      tags: staticMatch?.tags || [dbCourse.category.toLowerCase()],
+    };
+  });
+
   return (
     <MarketingPage {...COURSES_PAGE}>
-      <JsonLd data={courseListSchema(COURSES)} />
+      <JsonLd data={courseListSchema(courses)} />
       <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-        {COURSES.map((course) => (
+        {courses.map((course) => (
           <Card key={course.id} className="flex h-full flex-col overflow-hidden border-slate-200 bg-white p-0 transition-all hover:shadow-xl">
             {/* Course Image */}
             <div className="relative h-48 w-full overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -68,7 +100,7 @@ export default function CoursesPage() {
               <div className="mt-4 grid grid-cols-2 gap-3 border-t border-slate-100 pt-4">
                 <div className="flex items-center gap-2 text-sm text-slate-600">
                   <Star className="h-4 w-4 fill-amber-400 text-amber-400" />
-                  <span className="font-semibold text-slate-900">{course.rating}</span>
+                  <span className="font-semibold text-slate-900">{course.rating.toFixed(1)}</span>
                   <span className="text-slate-500">({course.students.toLocaleString()})</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-slate-600">

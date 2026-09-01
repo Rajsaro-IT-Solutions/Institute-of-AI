@@ -4,7 +4,7 @@ import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
 
 /**
- * Mock admin authentication for the University Of AI admin panel.
+ * Mock admin authentication for the Institute of AI admin panel.
  * In production this should be replaced with server-verified role checks.
  */
 export const ADMIN_PASSWORD = "admin123";

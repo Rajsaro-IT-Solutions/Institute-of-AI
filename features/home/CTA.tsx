@@ -1,9 +1,15 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Container from "@/components/layout/Container";
 import { Button } from "@/components/ui/button";
+import AdmissionsModal from "@/components/forms/AdmissionsModal";
 
 export default function CTASection() {
+  const [isAdmissionsModalOpen, setIsAdmissionsModalOpen] = useState(false);
+
   return (
     <section className="px-6 pb-24 pt-8">
       <Container>
@@ -24,13 +30,21 @@ export default function CTASection() {
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline">
-                <Link href="/contact">Talk to admissions</Link>
+              <Button
+                size="lg"
+                variant="outline"
+                onClick={() => setIsAdmissionsModalOpen(true)}
+              >
+                Talk to admissions
               </Button>
             </div>
           </div>
         </div>
       </Container>
+      <AdmissionsModal
+        isOpen={isAdmissionsModalOpen}
+        onClose={() => setIsAdmissionsModalOpen(false)}
+      />
     </section>
   );
 }

@@ -14,12 +14,17 @@ import Table, { TableCell } from "@/features/admin/components/Table";
 import StatusBadge from "@/features/admin/components/StatusBadge";
 import ProgressBar from "@/features/admin/components/ProgressBar";
 import {
-  ADMIN_PAYMENTS,
-  ADMIN_STATS,
-  ADMIN_STUDENTS,
+  getCoursesAction,
+  getStudentsAction,
+  getInstructorsAction,
+  getPaymentsAction,
+} from "@/app/admin/actions";
+import {
   MONTHLY_ENROLLMENTS,
   MONTHLY_REVENUE,
 } from "@/features/admin/data";
+
+export const dynamic = "force-dynamic";
 
 const STAT_ICONS = {
   users: <Users className="h-5 w-5" />,
@@ -34,9 +39,48 @@ function formatINR(amount: number) {
   })}`;
 }
 
-export default function AdminDashboardPage() {
-  const recentStudents = ADMIN_STUDENTS.slice(0, 5);
-  const recentPayments = ADMIN_PAYMENTS.slice(0, 4);
+export default async function AdminDashboardPage() {
+  const students = await getStudentsAction();
+  const courses = await getCoursesAction();
+  const instructors = await getInstructorsAction();
+  const payments = await getPaymentsAction();
+
+  const recentStudents = students.slice(-5).reverse();
+  const recentPayments = payments.slice(-4).reverse();
+
+  const successPayments = payments.filter((p) => p.status === "Success");
+  const mtdRevenue = successPayments.reduce((sum, p) => sum + p.amount, 0);
+
+  const dynamicStats = [
+    {
+      label: "Total Students",
+      value: students.length.toLocaleString(),
+      delta: `+${Math.round(students.length * 0.1)}% this month`,
+      trending: "up",
+      icon: "users",
+    },
+    {
+      label: "Active Courses",
+      value: courses.filter((c) => c.status === "Published").length.toString(),
+      delta: `+${courses.filter((c) => c.status === "Draft").length} in drafts`,
+      trending: "up",
+      icon: "courses",
+    },
+    {
+      label: "Expert Instructors",
+      value: instructors.length.toString(),
+      delta: `${instructors.filter((i) => i.status === "Active").length} active`,
+      trending: "up",
+      icon: "instructors",
+    },
+    {
+      label: "Revenue (MTD)",
+      value: formatINR(mtdRevenue),
+      delta: `+${successPayments.length} successful payments`,
+      trending: "up",
+      icon: "payments",
+    },
+  ] as const;
 
   return (
     <>
@@ -46,7 +90,7 @@ export default function AdminDashboardPage() {
       />
 
       <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-        {ADMIN_STATS.map((stat) => (
+        {dynamicStats.map((stat) => (
           <StatCard
             key={stat.label}
             label={stat.label}
